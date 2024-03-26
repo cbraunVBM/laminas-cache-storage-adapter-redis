@@ -49,6 +49,7 @@ class RedisResourceManagerTest extends TestCase
         $this->assertEquals('testhost', $server['host']);
         $this->assertEquals(1234, $server['port']);
         $this->assertEquals('dummypass', $this->resourceManager->getPassword($dummyResId));
+        $this->assertEquals('dummyuser', $this->resourceManager->getUser($dummyResId));
     }
 
     /**
@@ -71,6 +72,7 @@ class RedisResourceManagerTest extends TestCase
         $this->assertEquals('testhost', $server['host']);
         $this->assertEquals(1234, $server['port']);
         $this->assertEquals('abcd1234', $this->resourceManager->getPassword($dummyResId2));
+        $this->assertEquals('dummyuser', $this->resourceManager->getUser($dummyResId2));
     }
 
     /**

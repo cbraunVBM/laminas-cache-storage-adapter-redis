@@ -361,8 +361,8 @@ final class RedisResourceManager
             }
 
             $resource['initialized'] = true;
-            if ($resource['username'] && $resource['password']) {
-                $redis->auth([$resource['username'], $resource['password']]);
+            if ($resource['user'] && $resource['password']) {
+                $redis->auth([$resource['user'], $resource['password']]);
             } elseif ($resource['password']) {
                 $redis->auth($resource['password']);
             }

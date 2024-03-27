@@ -768,13 +768,12 @@ final class RedisResourceManager
 
         return $info;
     }
-    
+
     /**
      * Set redis user
      *
      * @param string $id
      * @param string $user
-     *
      * @return RedisResourceManager
      */
     public function setUser($id, $user)
@@ -784,9 +783,9 @@ final class RedisResourceManager
                 'user' => $user,
             ]);
         }
-        
+
         $resource                = &$this->resources[$id];
-        $resource['user'] = $user;
+        $resource['user']        = $user;
         $resource['initialized'] = false;
         return $this;
     }
